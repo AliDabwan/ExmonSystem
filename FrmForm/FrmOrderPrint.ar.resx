@@ -1,0 +1,1023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TxtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 26</value>
+  </data>
+  <data name="TxtID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 18pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>758, 64</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>الطباعة</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>758, 64</value>
+  </data>
+  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 270</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="colThirdyName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colThirdyName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colMotherName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colMotherName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="colCompanyExName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colCompanyExName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="colPassportNo.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colPassportNo.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="colCompanyTorismName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colCompanyTorismName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="colBirthDate.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colBirthDate.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="colIssuedDate.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colIssuedDate.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="colExpierDate.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colExpierDate.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="colDestnationName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colDestnationName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="colTravilPorpos.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colTravilPorpos.VisibleIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 185</value>
+  </data>
+  <data name="gridControl1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="DevExpress.Data.v20.1" name="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="simpleButton1.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIwLjEsIFZlcnNpb249MjAuMS4z
+        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
+        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAMcDAAAC77u/
+        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
+        IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
+        MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3Bh
+        Y2U9InByZXNlcnZlIiBpZD0iTGF5ZXJfMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAg
+        MzIgMzIiPg0KICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLkJsYWNre2ZpbGw6IzcyNzI3Mjt9Cgku
+        WWVsbG93e2ZpbGw6I0ZGQjExNTt9CgkuQmx1ZXtmaWxsOiMxMTc3RDc7fQoJLkdyZWVue2ZpbGw6IzAz
+        OUMyMzt9CgkuUmVke2ZpbGw6I0QxMUMxQzt9CgkuV2hpdGV7ZmlsbDojRkZGRkZGO30KCS5zdDB7b3Bh
+        Y2l0eTowLjc1O30KCS5zdDF7b3BhY2l0eTowLjU7fQoJLnN0MntvcGFjaXR5OjAuMjU7fQo8L3N0eWxl
+        Pg0KICA8ZyBpZD0iQWRkSGVhZGVyIj4NCiAgICA8cmVjdCB4PSI0IiB5PSI2IiB3aWR0aD0iMTQiIGhl
+        aWdodD0iNiIgcng9IjAiIHJ5PSIwIiBjbGFzcz0iWWVsbG93IiAvPg0KICAgIDxnIGNsYXNzPSJzdDAi
+        Pg0KICAgICAgPHBhdGggZD0iTTE4LDE2SDR2LTJoMTRWMTZ6IE0xOCwxOEg0djJoMTRWMTh6IE0xOCwy
+        Mkg0djJoMTRWMjJ6IiBjbGFzcz0iQmxhY2siIC8+DQogICAgPC9nPg0KICAgIDxwYXRoIGQ9Ik0yMCwx
+        MnYxNEgyVjRoMTZoMmgyVjNjMC0wLjUtMC41LTEtMS0xSDFDMC41LDIsMCwyLjUsMCwzdjI0YzAsMC41
+        LDAuNSwxLDEsMWgyMGMwLjUsMCwxLTAuNSwxLTFWMTZ2LTRIMjB6ICAgIiBjbGFzcz0iQmxhY2siIC8+
+        DQogICAgPHBvbHlnb24gcG9pbnRzPSIzMiw2IDI4LDYgMjgsMiAyNCwyIDI0LDYgMjAsNiAyMCwxMCAy
+        NCwxMCAyNCwxNCAyOCwxNCAyOCwxMCAzMiwxMCAgIiBjbGFzcz0iR3JlZW4iIC8+DQogIDwvZz4NCjwv
+        c3ZnPgs=
+</value>
+  </data>
+  <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 448</value>
+  </data>
+  <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 47</value>
+  </data>
+  <data name="simpleButton1.Text" xml:space="preserve">
+    <value>اضافة</value>
+  </data>
+  <data name="simpleButton1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TxtSubscribId.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TxtSubscribId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 18</value>
+  </data>
+  <data name="TxtPrice.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TxtPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 21</value>
+  </data>
+  <data name="TxtPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 18</value>
+  </data>
+  <data name="tableLayoutPanel5.ColumnCount" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="BtnRemove4.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="BtnRemove4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 29</value>
+  </data>
+  <data name="BtnRemove4.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="BtnRemove4.ToolTip" xml:space="preserve">
+    <value>الغاء هذا السطر</value>
+  </data>
+  <data name="TxtValu4.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TxtValu4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 3</value>
+  </data>
+  <data name="TxtValu4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 26</value>
+  </data>
+  <data name="TxtValu4.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="TxtGover4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TxtGover4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 3</value>
+  </data>
+  <data name="TxtGover4.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TxtGover4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 26</value>
+  </data>
+  <data name="TxtGover4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v20.1" name="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="labelControl9.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 3</value>
+  </data>
+  <data name="labelControl9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 29</value>
+  </data>
+  <data name="labelControl9.Text" xml:space="preserve">
+    <value>4   الدولة</value>
+  </data>
+  <data name="TxtAirLines4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TxtAirLines4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 3</value>
+  </data>
+  <data name="TxtAirLines4.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TxtAirLines4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 26</value>
+  </data>
+  <data name="TxtAirLines4.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="labelControl10.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 3</value>
+  </data>
+  <data name="labelControl10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 29</value>
+  </data>
+  <data name="labelControl10.Text" xml:space="preserve">
+    <value>الطيران</value>
+  </data>
+  <data name="labelControl11.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 3</value>
+  </data>
+  <data name="labelControl11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 29</value>
+  </data>
+  <data name="labelControl11.Text" xml:space="preserve">
+    <value>العدد</value>
+  </data>
+  <data name="tableLayoutPanel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 367</value>
+  </data>
+  <data name="tableLayoutPanel5.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>711, 35</value>
+  </data>
+  <data name="tableLayoutPanel5.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="tableLayoutPanel4.ColumnCount" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="TxtValu3.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TxtValu3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 3</value>
+  </data>
+  <data name="TxtValu3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 26</value>
+  </data>
+  <data name="TxtValu3.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="BtnRemove3.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="BtnRemove3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 29</value>
+  </data>
+  <data name="BtnRemove3.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="BtnRemove3.ToolTip" xml:space="preserve">
+    <value>الغاء هذا السطر</value>
+  </data>
+  <data name="TxtGover3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TxtGover3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 3</value>
+  </data>
+  <data name="TxtGover3.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TxtGover3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 26</value>
+  </data>
+  <data name="TxtGover3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labelControl6.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 3</value>
+  </data>
+  <data name="labelControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 29</value>
+  </data>
+  <data name="labelControl6.Text" xml:space="preserve">
+    <value>3   الدولة</value>
+  </data>
+  <data name="TxtAirLines3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TxtAirLines3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 3</value>
+  </data>
+  <data name="TxtAirLines3.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TxtAirLines3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 26</value>
+  </data>
+  <data name="TxtAirLines3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="labelControl7.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 3</value>
+  </data>
+  <data name="labelControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 29</value>
+  </data>
+  <data name="labelControl7.Text" xml:space="preserve">
+    <value>الطيران</value>
+  </data>
+  <data name="labelControl8.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 3</value>
+  </data>
+  <data name="labelControl8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 29</value>
+  </data>
+  <data name="labelControl8.Text" xml:space="preserve">
+    <value>العدد</value>
+  </data>
+  <data name="tableLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 326</value>
+  </data>
+  <data name="tableLayoutPanel4.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>711, 35</value>
+  </data>
+  <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="tableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="TxtValu2.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TxtValu2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 3</value>
+  </data>
+  <data name="TxtValu2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 26</value>
+  </data>
+  <data name="TxtValu2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="TxtGover2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TxtGover2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 3</value>
+  </data>
+  <data name="TxtGover2.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TxtGover2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 26</value>
+  </data>
+  <data name="TxtGover2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BtnRemove2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="BtnRemove2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 29</value>
+  </data>
+  <data name="BtnRemove2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="BtnRemove2.ToolTip" xml:space="preserve">
+    <value>الغاء هذا السطر</value>
+  </data>
+  <data name="labelControl3.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 3</value>
+  </data>
+  <data name="labelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 29</value>
+  </data>
+  <data name="labelControl3.Text" xml:space="preserve">
+    <value>2   الدولة</value>
+  </data>
+  <data name="TxtAirLines2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TxtAirLines2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 3</value>
+  </data>
+  <data name="TxtAirLines2.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TxtAirLines2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 26</value>
+  </data>
+  <data name="TxtAirLines2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelControl4.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 3</value>
+  </data>
+  <data name="labelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 29</value>
+  </data>
+  <data name="labelControl4.Text" xml:space="preserve">
+    <value>الطيران</value>
+  </data>
+  <data name="labelControl5.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 3</value>
+  </data>
+  <data name="labelControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 29</value>
+  </data>
+  <data name="labelControl5.Text" xml:space="preserve">
+    <value>العدد</value>
+  </data>
+  <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 285</value>
+  </data>
+  <data name="tableLayoutPanel3.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>711, 35</value>
+  </data>
+  <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="BtnAdd.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIwLjEsIFZlcnNpb249MjAuMS4z
+        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
+        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAMcDAAAC77u/
+        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
+        IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
+        MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3Bh
+        Y2U9InByZXNlcnZlIiBpZD0iTGF5ZXJfMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAg
+        MzIgMzIiPg0KICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLkJsYWNre2ZpbGw6IzcyNzI3Mjt9Cgku
+        WWVsbG93e2ZpbGw6I0ZGQjExNTt9CgkuQmx1ZXtmaWxsOiMxMTc3RDc7fQoJLkdyZWVue2ZpbGw6IzAz
+        OUMyMzt9CgkuUmVke2ZpbGw6I0QxMUMxQzt9CgkuV2hpdGV7ZmlsbDojRkZGRkZGO30KCS5zdDB7b3Bh
+        Y2l0eTowLjc1O30KCS5zdDF7b3BhY2l0eTowLjU7fQoJLnN0MntvcGFjaXR5OjAuMjU7fQo8L3N0eWxl
+        Pg0KICA8ZyBpZD0iQWRkSGVhZGVyIj4NCiAgICA8cmVjdCB4PSI0IiB5PSI2IiB3aWR0aD0iMTQiIGhl
+        aWdodD0iNiIgcng9IjAiIHJ5PSIwIiBjbGFzcz0iWWVsbG93IiAvPg0KICAgIDxnIGNsYXNzPSJzdDAi
+        Pg0KICAgICAgPHBhdGggZD0iTTE4LDE2SDR2LTJoMTRWMTZ6IE0xOCwxOEg0djJoMTRWMTh6IE0xOCwy
+        Mkg0djJoMTRWMjJ6IiBjbGFzcz0iQmxhY2siIC8+DQogICAgPC9nPg0KICAgIDxwYXRoIGQ9Ik0yMCwx
+        MnYxNEgyVjRoMTZoMmgyVjNjMC0wLjUtMC41LTEtMS0xSDFDMC41LDIsMCwyLjUsMCwzdjI0YzAsMC41
+        LDAuNSwxLDEsMWgyMGMwLjUsMCwxLTAuNSwxLTFWMTZ2LTRIMjB6ICAgIiBjbGFzcz0iQmxhY2siIC8+
+        DQogICAgPHBvbHlnb24gcG9pbnRzPSIzMiw2IDI4LDYgMjgsMiAyNCwyIDI0LDYgMjAsNiAyMCwxMCAy
+        NCwxMCAyNCwxNCAyOCwxNCAyOCwxMCAzMiwxMCAgIiBjbGFzcz0iR3JlZW4iIC8+DQogIDwvZz4NCjwv
+        c3ZnPgs=
+</value>
+  </data>
+  <data name="BtnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>486, 436</value>
+  </data>
+  <data name="BtnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 47</value>
+  </data>
+  <data name="BtnAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="BtnAdd.Text" xml:space="preserve">
+    <value>اضافة</value>
+  </data>
+  <data name="BtnAdd.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="BtnRemove1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="BtnRemove1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 29</value>
+  </data>
+  <data name="BtnRemove1.ToolTip" xml:space="preserve">
+    <value>الغاء هذا السطر</value>
+  </data>
+  <data name="TxtValu1.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TxtValu1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 3</value>
+  </data>
+  <data name="TxtValu1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 26</value>
+  </data>
+  <data name="TxtValu1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="TxtGover1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TxtGover1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 3</value>
+  </data>
+  <data name="TxtGover1.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="TxtGover1.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TxtGover1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 26</value>
+  </data>
+  <data name="TxtGover1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LblALL.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="LblALL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 3</value>
+  </data>
+  <data name="LblALL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 29</value>
+  </data>
+  <data name="LblALL.Text" xml:space="preserve">
+    <value>1   الدولة</value>
+  </data>
+  <data name="TxtAirLines1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TxtAirLines1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 3</value>
+  </data>
+  <data name="TxtAirLines1.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TxtAirLines1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 26</value>
+  </data>
+  <data name="TxtAirLines1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelControl1.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 3</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 29</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>الطيران</value>
+  </data>
+  <data name="labelControl2.AutoSizeMode" type="DevExpress.XtraEditors.LabelAutoSizeMode, DevExpress.XtraEditors.v20.1">
+    <value>None</value>
+  </data>
+  <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 3</value>
+  </data>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 29</value>
+  </data>
+  <data name="labelControl2.Text" xml:space="preserve">
+    <value>العدد</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 244</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>711, 35</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="BarcodeTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 2</value>
+  </data>
+  <data name="BarcodeTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 20</value>
+  </data>
+  <data name="OrderCountCalcEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 72</value>
+  </data>
+  <data name="OrderCountCalcEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 26</value>
+  </data>
+  <data name="OrderCountCalcEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="CreatedDateTextEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 42</value>
+  </data>
+  <data name="CreatedDateTextEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 26</value>
+  </data>
+  <data name="DriverIdLookUpEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 72</value>
+  </data>
+  <data name="DriverIdLookUpEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 26</value>
+  </data>
+  <data name="DriverIdLookUpEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="ExCompanyIdLookUpEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 42</value>
+  </data>
+  <data name="ExCompanyIdLookUpEdit.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExCompanyIdLookUpEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 26</value>
+  </data>
+  <data name="ExCompanyIdLookUpEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="TxtCompanyEn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>522, 26</value>
+  </data>
+  <data name="dataLayoutControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="ItemForExCompanyId.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="ItemForExCompanyId.Text" xml:space="preserve">
+    <value>اسم الشركة</value>
+  </data>
+  <data name="ItemForOrderCount.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="ItemForOrderCount.Text" xml:space="preserve">
+    <value>العدد</value>
+  </data>
+  <data name="ItemForCreatedDate.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="ItemForCreatedDate.Text" xml:space="preserve">
+    <value>تاريخ الطلب</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>اسم الشركة انجليزي</value>
+  </data>
+  <data name="ItemForDriverId.AppearanceItemCaption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="ItemForDriverId.Text" xml:space="preserve">
+    <value>اسم السائق</value>
+  </data>
+  <data name="dataLayoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>705, 146</value>
+  </data>
+  <data name="layoutControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 33</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>729, 170</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>400</value>
+  </data>
+  <data name="BtnClose.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIwLjEsIFZlcnNpb249MjAuMS4z
+        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
+        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAKgBAAAC77u/
+        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
+        IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
+        MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3Bh
+        Y2U9InByZXNlcnZlIiBpZD0iQ2xlYXJIZWFkZXJBbmRGb290ZXIiPg0KICA8cGF0aCBkPSJNMjcsNEg1
+        QzQuNSw0LDQsNC41LDQsNXYyMmMwLDAuNSwwLjUsMSwxLDFoMjJjMC41LDAsMS0wLjUsMS0xVjVDMjgs
+        NC41LDI3LjUsNCwyNyw0eiBNMjIsMjBsLTIsMmwtNC00bC00LDQgIGwtMi0ybDQtNGwtNC00bDItMmw0
+        LDRsNC00bDIsMmwtNCw0TDIyLDIweiIgZmlsbD0iI0QxMUMxQyIgY2xhc3M9IlJlZCIgLz4NCjwvc3Zn
+        Pgs=
+</value>
+  </data>
+  <data name="BtnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 56</value>
+  </data>
+  <data name="BtnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>752, 33</value>
+  </data>
+  <data name="BtnClose.Text" xml:space="preserve">
+    <value>اغلاق</value>
+  </data>
+  <data name="BtnSave.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="BtnSave.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIwLjEsIFZlcnNpb249MjAuMS4z
+        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
+        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAPcBAAAC77u/
+        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
+        IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
+        MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3Bh
+        Y2U9InByZXNlcnZlIiBpZD0iTGF5ZXJfMSI+DQogIDxnIGlkPSJFeHBvcnQiPg0KICAgIDxwYXRoIGQ9
+        Ik0xMCwxMkg2VjZoNFYxMnogTTIyLDEydjZ2OWMwLDAuNi0wLjQsMS0xLDFIMWMtMC42LDAtMS0wLjQt
+        MS0xVjdjMC0wLjYsMC40LTEsMS0xaDN2OGgxNHYtMkgyMnogTTE4LDE4SDQgICB2NmgxNFYxOHoiIGZp
+        bGw9IiM3MjcyNzIiIGNsYXNzPSJCbGFjayIgLz4NCiAgICA8cG9seWdvbiBwb2ludHM9IjE2LDEwIDI0
+        LDEwIDI0LDE0IDMyLDggMjQsMiAyNCw2IDE2LDYgICIgZmlsbD0iIzAzOUMyMyIgY2xhc3M9IkdyZWVu
+        IiAvPg0KICA8L2c+DQo8L3N2Zz4L
+</value>
+  </data>
+  <data name="BtnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 3</value>
+  </data>
+  <data name="BtnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 47</value>
+  </data>
+  <data name="BtnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="BtnSave.Text" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="tableLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 509</value>
+  </data>
+  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>758, 92</value>
+  </data>
+  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 64</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>758, 601</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>758, 665</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>الطباعة</value>
+  </data>
+</root>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="20.1.3.0" Ref="1" ControlType="dxKB17175.XtraReport1, dxKB17175, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Name="XtraReport1" PageWidth="850" PageHeight="1100" Version="20.1" DataMember="Customers" DataSource="#Ref-0">
+  <Bands>
+    <Item1 Ref="2" ControlType="DetailBand" Name="Detail" HeightF="25" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+      <Controls>
+        <Item1 Ref="3" ControlType="XRTable" Name="table1" SizeF="650,25" LocationFloat="0,0">
+          <Rows>
+            <Item1 Ref="4" ControlType="XRTableRow" Name="tableRow1" Weight="11.5">
+              <Cells>
+                <Item1 Ref="5" ControlType="XRTableCell" Name="tableCell1" Weight="0.43333333333333335">
+                  <DataBindings>
+                    <Item1 Ref="6" PropertyName="Text" DataMember="CompanyName" />
+                  </DataBindings>
+                </Item1>
+                <Item2 Ref="7" ControlType="XRTableCell" Name="tableCell2" Weight="0.43333333333333335">
+                  <DataBindings>
+                    <Item1 Ref="8" PropertyName="Text" DataMember="ContactName" />
+                  </DataBindings>
+                </Item2>
+                <Item3 Ref="9" ControlType="XRTableCell" Name="tableCell3" Weight="0.43333333333333335">
+                  <DataBindings>
+                    <Item1 Ref="10" PropertyName="Text" DataMember="Address" />
+                  </DataBindings>
+                </Item3>
+                <Item4 Ref="11" ControlType="XRTableCell" Name="tableCell4" Weight="0.43333333333333335">
+                  <DataBindings>
+                    <Item1 Ref="12" PropertyName="Text" DataMember="City" />
+                  </DataBindings>
+                </Item4>
+                <Item5 Ref="13" ControlType="XRTableCell" Name="tableCell5" Weight="0.43333333333333335">
+                  <DataBindings>
+                    <Item1 Ref="14" PropertyName="Text" DataMember="Country" />
+                  </DataBindings>
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item1>
+    <Item2 Ref="15" ControlType="PageHeaderBand" Name="PageHeader" HeightF="25" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+      <Controls>
+        <Item1 Ref="16" ControlType="XRTable" Name="table2" SizeF="650,25" LocationFloat="0,0" Borders="Bottom">
+          <Rows>
+            <Item1 Ref="17" ControlType="XRTableRow" Name="tableRow2" Weight="11.5">
+              <Cells>
+                <Item1 Ref="18" ControlType="XRTableCell" Name="tableCell6" Weight="0.43333333333333335" Text="CompanyName" />
+                <Item2 Ref="19" ControlType="XRTableCell" Name="tableCell7" Weight="0.43333333333333335" Text="ContactName" />
+                <Item3 Ref="20" ControlType="XRTableCell" Name="tableCell8" Weight="0.43333333333333335" Text="Address" />
+                <Item4 Ref="21" ControlType="XRTableCell" Name="tableCell9" Weight="0.43333333333333335" Text="City" />
+                <Item5 Ref="22" ControlType="XRTableCell" Name="tableCell10" Weight="0.43333333333333335" Text="Country" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="23" ControlType="TopMarginBand" Name="topMarginBand1">
+      <Controls>
+        <Item1 Ref="24" ControlType="XRLabel" Name="label1" Multiline="true" Text="Heloo" SizeF="303.125,55.20833" LocationFloat="129.999985,34.7916756" Padding="2,2,0,0,96" />
+      </Controls>
+    </Item3>
+    <Item4 Ref="25" ControlType="BottomMarginBand" Name="bottomMarginBand1" />
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v20.1" Ref="0" Content="~Xtra#NULL" Type="dxKB17175.nwindDataSet" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

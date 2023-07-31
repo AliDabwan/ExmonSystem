@@ -1,0 +1,1681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA729048-AE78-47CC-A232-F791536C306C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ExmonSystem</RootNamespace>
+    <AssemblyName>ExmonSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CARWASHLOGO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Design, Version=14.1.0.36, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=14.1.0.36, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.36, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=14.1.0.36, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.36, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.36, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=14.1.0.36, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.SuperGrid.Design, Version=14.1.0.36, Culture=neutral, PublicKeyToken=26d81176cfa2b486, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.SuperGrid.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.BonusSkins.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.Designer.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Charts.Designer.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v20.1.Win, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GigaPOS\fULLsOURCRNGIGAPOS_10_14\GIGAPOS\bin\Debug\DevExpress.DataAccess.v20.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dialogs.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.TreeMap.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GigaPOS\fULLsOURCRNGIGAPOS_10_14\GIGAPOS\bin\Debug\DevExpress.Data.Desktop.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Charts.v20.1">
+      <HintPath>..\..\GigaPOS\fULLsOURCRNGIGAPOS_10_14\GIGAPOS\bin\Debug\DevExpress.Xpf.Charts.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraDialogs.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.1.CodeCompletion, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.1.Service, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeMap.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\..\..\..\MurunaPOS\MurunaSoft\bin\Debug\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HijriLibrary">
+      <HintPath>..\..\..\..\MurunaPOS\MurunaSoft\bin\Debug\HijriLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acc\FrmAccCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmAccCash.Designer.cs">
+      <DependentUpon>FrmAccCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmAccountClosinglist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmAccountClosinglist.Designer.cs">
+      <DependentUpon>FrmAccountClosinglist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmAccAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmAccAcc.Designer.cs">
+      <DependentUpon>FrmAccAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmCustomersDebits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmCustomersDebits.Designer.cs">
+      <DependentUpon>FrmCustomersDebits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmAccountsClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmAccountsClose.Designer.cs">
+      <DependentUpon>FrmAccountsClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmExCompanyAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmExCompanyAccounts.Designer.cs">
+      <DependentUpon>FrmExCompanyAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmOrdersPrintedRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmOrdersPrintedRpt.Designer.cs">
+      <DependentUpon>FrmOrdersPrintedRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmOrdersRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmOrdersRpt.Designer.cs">
+      <DependentUpon>FrmOrdersRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmPaymentTypesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmPaymentTypesList.Designer.cs">
+      <DependentUpon>FrmPaymentTypesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmDisplayAmmounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmDisplayAmmounts.Designer.cs">
+      <DependentUpon>FrmDisplayAmmounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmPayments.Designer.cs">
+      <DependentUpon>FrmPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmSubscriber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmSubscriber.Designer.cs">
+      <DependentUpon>FrmSubscriber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="companyControl.cs" />
+    <Compile Include="Controls\CompanyControl.cs" />
+    <Compile Include="Controls\ItemGoverControl.cs" />
+    <Compile Include="FrmForm\FrmCompanyTorism.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmCompanyTorism.Designer.cs">
+      <DependentUpon>FrmCompanyTorism.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmOrderPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmOrderPrint.Designer.cs">
+      <DependentUpon>FrmOrderPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmOrderList.Designer.cs">
+      <DependentUpon>FrmOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmOrder.Designer.cs">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmExCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmExCompany.Designer.cs">
+      <DependentUpon>FrmExCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmAirLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmAirLine.Designer.cs">
+      <DependentUpon>FrmAirLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmDistrict.Designer.cs">
+      <DependentUpon>FrmDistrict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmDestination.Designer.cs">
+      <DependentUpon>FrmDestination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmDriver.Designer.cs">
+      <DependentUpon>FrmDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmItemGover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmItemGover.Designer.cs">
+      <DependentUpon>FrmItemGover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\FrmPrescriptionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmPrescriptionAdd.Designer.cs">
+      <DependentUpon>FrmPrescriptionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRestorePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRestorePassword.Designer.cs">
+      <DependentUpon>FrmRestorePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProfile.Designer.cs">
+      <DependentUpon>FrmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSQLHello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSQLHello.Designer.cs">
+      <DependentUpon>FrmSQLHello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Date.cs" />
+    <Compile Include="Migrations\202207111459193_newIni.cs" />
+    <Compile Include="Migrations\202207111459193_newIni.designer.cs">
+      <DependentUpon>202207111459193_newIni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207111946010_newIni2.cs" />
+    <Compile Include="Migrations\202207111946010_newIni2.designer.cs">
+      <DependentUpon>202207111946010_newIni2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207112122270_newIni3.cs" />
+    <Compile Include="Migrations\202207112122270_newIni3.designer.cs">
+      <DependentUpon>202207112122270_newIni3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207112148099_newIni4.cs" />
+    <Compile Include="Migrations\202207112148099_newIni4.designer.cs">
+      <DependentUpon>202207112148099_newIni4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207141403526_newInit4.cs" />
+    <Compile Include="Migrations\202207141403526_newInit4.designer.cs">
+      <DependentUpon>202207141403526_newInit4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207161451362_newInit5.cs" />
+    <Compile Include="Migrations\202207161451362_newInit5.designer.cs">
+      <DependentUpon>202207161451362_newInit5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207161723117_newInit6.cs" />
+    <Compile Include="Migrations\202207161723117_newInit6.designer.cs">
+      <DependentUpon>202207161723117_newInit6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207162230397_newInit7.cs" />
+    <Compile Include="Migrations\202207162230397_newInit7.designer.cs">
+      <DependentUpon>202207162230397_newInit7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207181418285_newinit8.cs" />
+    <Compile Include="Migrations\202207181418285_newinit8.designer.cs">
+      <DependentUpon>202207181418285_newinit8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207181852019_newinit9.cs" />
+    <Compile Include="Migrations\202207181852019_newinit9.designer.cs">
+      <DependentUpon>202207181852019_newinit9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208051833361_new5_8.cs" />
+    <Compile Include="Migrations\202208051833361_new5_8.designer.cs">
+      <DependentUpon>202208051833361_new5_8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208051935209_new5_8_1.cs" />
+    <Compile Include="Migrations\202208051935209_new5_8_1.designer.cs">
+      <DependentUpon>202208051935209_new5_8_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208091157312_new8_9.cs" />
+    <Compile Include="Migrations\202208091157312_new8_9.designer.cs">
+      <DependentUpon>202208091157312_new8_9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208091203256_new8_9_1.cs" />
+    <Compile Include="Migrations\202208091203256_new8_9_1.designer.cs">
+      <DependentUpon>202208091203256_new8_9_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208091239263_new8_9_2.cs" />
+    <Compile Include="Migrations\202208091239263_new8_9_2.designer.cs">
+      <DependentUpon>202208091239263_new8_9_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208091316106_new8_9_3.cs" />
+    <Compile Include="Migrations\202208091316106_new8_9_3.designer.cs">
+      <DependentUpon>202208091316106_new8_9_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208091430266_new8_9_4.cs" />
+    <Compile Include="Migrations\202208091430266_new8_9_4.designer.cs">
+      <DependentUpon>202208091430266_new8_9_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208091536575_new8_9_5.cs" />
+    <Compile Include="Migrations\202208091536575_new8_9_5.designer.cs">
+      <DependentUpon>202208091536575_new8_9_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208111338447_newAll.cs" />
+    <Compile Include="Migrations\202208111338447_newAll.designer.cs">
+      <DependentUpon>202208111338447_newAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208161618319_new9.cs" />
+    <Compile Include="Migrations\202208161618319_new9.designer.cs">
+      <DependentUpon>202208161618319_new9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208171436415_new10.cs" />
+    <Compile Include="Migrations\202208171436415_new10.designer.cs">
+      <DependentUpon>202208171436415_new10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210230849065_editcomm.cs" />
+    <Compile Include="Migrations\202210230849065_editcomm.designer.cs">
+      <DependentUpon>202210230849065_editcomm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210242010245_editcomm2.cs" />
+    <Compile Include="Migrations\202210242010245_editcomm2.designer.cs">
+      <DependentUpon>202210242010245_editcomm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210242241106_editcomm3.cs" />
+    <Compile Include="Migrations\202210242241106_editcomm3.designer.cs">
+      <DependentUpon>202210242241106_editcomm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210311525029_AddTasleemStatueToGroup.cs" />
+    <Compile Include="Migrations\202210311525029_AddTasleemStatueToGroup.designer.cs">
+      <DependentUpon>202210311525029_AddTasleemStatueToGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305122108227_newDriver.cs" />
+    <Compile Include="Migrations\202305122108227_newDriver.designer.cs">
+      <DependentUpon>202305122108227_newDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305131717074_newCarType.cs" />
+    <Compile Include="Migrations\202305131717074_newCarType.designer.cs">
+      <DependentUpon>202305131717074_newCarType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305141739345_newCarType2.cs" />
+    <Compile Include="Migrations\202305141739345_newCarType2.designer.cs">
+      <DependentUpon>202305141739345_newCarType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305141745303_newCarType3.cs" />
+    <Compile Include="Migrations\202305141745303_newCarType3.designer.cs">
+      <DependentUpon>202305141745303_newCarType3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305152102115_newdb.cs" />
+    <Compile Include="Migrations\202305152102115_newdb.designer.cs">
+      <DependentUpon>202305152102115_newdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305160325438_newdb3.cs" />
+    <Compile Include="Migrations\202305160325438_newdb3.designer.cs">
+      <DependentUpon>202305160325438_newdb3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305211752519_newExmon.cs" />
+    <Compile Include="Migrations\202305211752519_newExmon.designer.cs">
+      <DependentUpon>202305211752519_newExmon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305221315447_newex2.cs" />
+    <Compile Include="Migrations\202305221315447_newex2.designer.cs">
+      <DependentUpon>202305221315447_newex2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305221559523_newex3.cs" />
+    <Compile Include="Migrations\202305221559523_newex3.designer.cs">
+      <DependentUpon>202305221559523_newex3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305221630184_newex4.cs" />
+    <Compile Include="Migrations\202305221630184_newex4.designer.cs">
+      <DependentUpon>202305221630184_newex4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305230603173_new5.cs" />
+    <Compile Include="Migrations\202305230603173_new5.designer.cs">
+      <DependentUpon>202305230603173_new5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305230605477_new51.cs" />
+    <Compile Include="Migrations\202305230605477_new51.designer.cs">
+      <DependentUpon>202305230605477_new51.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305230623407_new52.cs" />
+    <Compile Include="Migrations\202305230623407_new52.designer.cs">
+      <DependentUpon>202305230623407_new52.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305231728056_new6.cs" />
+    <Compile Include="Migrations\202305231728056_new6.designer.cs">
+      <DependentUpon>202305231728056_new6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305251925492_new7.cs" />
+    <Compile Include="Migrations\202305251925492_new7.designer.cs">
+      <DependentUpon>202305251925492_new7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305261934014_new91.cs" />
+    <Compile Include="Migrations\202305261934014_new91.designer.cs">
+      <DependentUpon>202305261934014_new91.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305262227158_new101.cs" />
+    <Compile Include="Migrations\202305262227158_new101.designer.cs">
+      <DependentUpon>202305262227158_new101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202306111226213_editPassport.cs" />
+    <Compile Include="Migrations\202306111226213_editPassport.designer.cs">
+      <DependentUpon>202306111226213_editPassport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountsVendor.cs" />
+    <Compile Include="Models\AccountsSender.cs" />
+    <Compile Include="Models\BillsProfitTaxDTO.cs" />
+    <Compile Include="Models\AirLine.cs" />
+    <Compile Include="Models\CustomerDto.cs" />
+    <Compile Include="Models\ExCompanyDTO.cs" />
+    <Compile Include="Models\myVerify.cs" />
+    <Compile Include="Models\OrderDto.cs" />
+    <Compile Include="Models\OrderSub.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\ExCompany.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Subscriber.cs" />
+    <Compile Include="Models\Destination.cs" />
+    <Compile Include="Models\District.cs" />
+    <Compile Include="Models\CompanyTorism.cs" />
+    <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\ItemGover.cs" />
+    <Compile Include="Models\DiscountNote.cs" />
+    <Compile Include="Models\CustomDbInitializer.cs" />
+    <Compile Include="Models\Sender.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\GoogleDriveFilesRepository.cs" />
+    <Compile Include="Models\mySetingsSaveMode.cs" />
+    <Compile Include="Models\Joined\Joined.cs" />
+    <Compile Include="Models\myLog.cs" />
+    <Compile Include="Models\myVersionInfo.cs" />
+    <Compile Include="Models\myserverCon.cs" />
+    <Compile Include="ProdllClass.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\AccountDebitReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\AccountDebitReports.Designer.cs">
+      <DependentUpon>AccountDebitReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\AccountMovmentVendorsReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\AccountMovmentVendorsReports.Designer.cs">
+      <DependentUpon>AccountMovmentVendorsReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\AccountMovmentSenderReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\AccountMovmentSenderReports.Designer.cs">
+      <DependentUpon>AccountMovmentSenderReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FrmDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FrmDesign.Designer.cs">
+      <DependentUpon>FrmDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptCustomersExport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptCustomersExport.Designer.cs">
+      <DependentUpon>RptCustomersExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptExCompanyAccounts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptExCompanyAccounts.Designer.cs">
+      <DependentUpon>RptExCompanyAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptWasl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptWasl.Designer.cs">
+      <DependentUpon>RptWasl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptTicket.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptTicket.Designer.cs">
+      <DependentUpon>RptTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptPassport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptPassport.Designer.cs">
+      <DependentUpon>RptPassport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptVisa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptVisa.Designer.cs">
+      <DependentUpon>RptVisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptOrders.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptOrders.Designer.cs">
+      <DependentUpon>RptOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\AccountExpensesReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\AccountExpensesReports.Designer.cs">
+      <DependentUpon>AccountExpensesReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\AccountSummaryReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\AccountSummaryReports.Designer.cs">
+      <DependentUpon>AccountSummaryReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\AccountsDataReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\AccountsDataReports.Designer.cs">
+      <DependentUpon>AccountsDataReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\BillsAnalysisProfit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\BillsAnalysisProfit.Designer.cs">
+      <DependentUpon>BillsAnalysisProfit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\BillsAnalysisTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\BillsAnalysisTable.Designer.cs">
+      <DependentUpon>BillsAnalysisTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\BillsAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\BillsAnalysis.Designer.cs">
+      <DependentUpon>BillsAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\BillsItemsReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\BillsItemsReports.Designer.cs">
+      <DependentUpon>BillsItemsReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\ItemsExpReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\ItemsExpReports.Designer.cs">
+      <DependentUpon>ItemsExpReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\ItemsStockReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\ItemsStockReports.Designer.cs">
+      <DependentUpon>ItemsStockReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\ProfitsReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\ProfitsReports.Designer.cs">
+      <DependentUpon>ProfitsReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptEndDayAll.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptEndDayAll.Designer.cs">
+      <DependentUpon>RptEndDayAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptEndDayN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptEndDayN.Designer.cs">
+      <DependentUpon>RptEndDayN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptEndDayUserPos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptEndDayUserPos.Designer.cs">
+      <DependentUpon>RptEndDayUserPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptPrescripUsageLabel50X25.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptPrescripUsageLabel50X25.Designer.cs">
+      <DependentUpon>RptPrescripUsageLabel50X25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptDiscountNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptDiscountNote.Designer.cs">
+      <DependentUpon>RptDiscountNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\BillsReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\BillsReports.Designer.cs">
+      <DependentUpon>BillsReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FormBarcodRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FormBarcodRpt.Designer.cs">
+      <DependentUpon>FormBarcodRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\AccountMovmentReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\AccountMovmentReports.Designer.cs">
+      <DependentUpon>AccountMovmentReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\ItemsMovmentsReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\ItemsMovmentsReports.Designer.cs">
+      <DependentUpon>ItemsMovmentsReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptBarcode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptBarcode.Designer.cs">
+      <DependentUpon>RptBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptVoucher.Designer.cs">
+      <DependentUpon>RptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmAccountTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmAccountTransactions.Designer.cs">
+      <DependentUpon>FrmAccountTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmVouchersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmVouchersList.Designer.cs">
+      <DependentUpon>FrmVouchersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmCustomersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmCustomersList.Designer.cs">
+      <DependentUpon>FrmCustomersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptCashAccountsName.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="Controls\AccountControl.cs" />
+    <Compile Include="Controls\RollsControl.cs" />
+    <Compile Include="FrmForm\FrmRollsNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\FrmRollsNames.Designer.cs">
+      <DependentUpon>FrmRollsNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmCustomerAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmCustomerAcc.Designer.cs">
+      <DependentUpon>FrmCustomerAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acc\FrmCashAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc\FrmCashAccounts.Designer.cs">
+      <DependentUpon>FrmCashAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForm\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForm\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSQLConn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSQLConn.Designer.cs">
+      <DependentUpon>FrmSQLConn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStrat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStrat.Designer.cs">
+      <DependentUpon>FrmStrat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Helper\CurrencyInfo.cs" />
+    <Compile Include="Helper\ToWord.cs" />
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountsTransactionSub.cs" />
+    <Compile Include="Models\Accounts.cs" />
+    <Compile Include="Models\AccountsTransDTO.cs" />
+    <Compile Include="Models\AccountsLabels.cs" />
+    <Compile Include="Models\Roll.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\RollGroups.cs" />
+    <Compile Include="Models\RollNames.cs" />
+    <Compile Include="Models\MyDbContext.cs" />
+    <Compile Include="RPT\FrmDesignReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FrmDesignReports.Designer.cs">
+      <DependentUpon>FrmDesignReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FrmViewReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FrmViewReports.Designer.cs">
+      <DependentUpon>FrmViewReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptBarcode50X25.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptBarcode50X25.Designer.cs">
+      <DependentUpon>RptBarcode50X25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\RptForm.Designer.cs">
+      <DependentUpon>RptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\RptSaleInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\RptSaleInvoice.Designer.cs">
+      <DependentUpon>RptSaleInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\FrmSearchNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\FrmSearchNames.Designer.cs">
+      <DependentUpon>FrmSearchNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SD.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Setting\fff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\fff.Designer.cs">
+      <DependentUpon>fff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\FrmUserAuthorityGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\FrmUserAuthorityGroups.Designer.cs">
+      <DependentUpon>FrmUserAuthorityGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\FrmUserSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\FrmUserSetting.Designer.cs">
+      <DependentUpon>FrmUserSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScree1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScree1.Designer.cs">
+      <DependentUpon>SplashScree1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLHelpr.cs" />
+    <EmbeddedResource Include="Acc\FrmAccCash.ar.resx">
+      <DependentUpon>FrmAccCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmAccCash.resx">
+      <DependentUpon>FrmAccCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmAccountClosinglist.ar.resx">
+      <DependentUpon>FrmAccountClosinglist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmAccountClosinglist.resx">
+      <DependentUpon>FrmAccountClosinglist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmCashAccounts.ar.resx">
+      <DependentUpon>FrmCashAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmAccAcc.ar.resx">
+      <DependentUpon>FrmAccAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmAccAcc.resx">
+      <DependentUpon>FrmAccAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmCustomerAcc.ar.resx">
+      <DependentUpon>FrmCustomerAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmCustomersDebits.ar.resx">
+      <DependentUpon>FrmCustomersDebits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmCustomersDebits.resx">
+      <DependentUpon>FrmCustomersDebits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmExCompanyAccounts.ar.resx">
+      <DependentUpon>FrmExCompanyAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmExCompanyAccounts.resx">
+      <DependentUpon>FrmExCompanyAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmOrdersPrintedRpt.ar.resx">
+      <DependentUpon>FrmOrdersPrintedRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmOrdersPrintedRpt.resx">
+      <DependentUpon>FrmOrdersPrintedRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmOrdersRpt.ar.resx">
+      <DependentUpon>FrmOrdersRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmOrdersRpt.resx">
+      <DependentUpon>FrmOrdersRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmPaymentTypesList.ar.resx">
+      <DependentUpon>FrmPaymentTypesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmPaymentTypesList.resx">
+      <DependentUpon>FrmPaymentTypesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmCustomersList.ar.resx">
+      <DependentUpon>FrmCustomersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmAccountsClose.ar.resx">
+      <DependentUpon>FrmAccountsClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmAccountsClose.resx">
+      <DependentUpon>FrmAccountsClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmSubscriber.ar.resx">
+      <DependentUpon>FrmSubscriber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmSubscriber.resx">
+      <DependentUpon>FrmSubscriber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmVouchersList.ar.resx">
+      <DependentUpon>FrmVouchersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmDisplayAmmounts.resx">
+      <DependentUpon>FrmDisplayAmmounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmPayments.ar.resx">
+      <DependentUpon>FrmPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmPayments.resx">
+      <DependentUpon>FrmPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmCompanyTorism.ar.resx">
+      <DependentUpon>FrmCompanyTorism.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmCompanyTorism.resx">
+      <DependentUpon>FrmCompanyTorism.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmOrderPrint.ar.resx">
+      <DependentUpon>FrmOrderPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmOrderPrint.resx">
+      <DependentUpon>FrmOrderPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmOrderList.ar.resx">
+      <DependentUpon>FrmOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmOrderList.resx">
+      <DependentUpon>FrmOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmOrder.ar.resx">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmOrder.resx">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmExCompany.ar.resx">
+      <DependentUpon>FrmExCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmExCompany.resx">
+      <DependentUpon>FrmExCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmCustomer.ar.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmAirLine.ar.resx">
+      <DependentUpon>FrmAirLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmAirLine.resx">
+      <DependentUpon>FrmAirLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmDistrict.ar.resx">
+      <DependentUpon>FrmDistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmDistrict.resx">
+      <DependentUpon>FrmDistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmDestination.ar.resx">
+      <DependentUpon>FrmDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmDestination.resx">
+      <DependentUpon>FrmDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmDriver.ar.resx">
+      <DependentUpon>FrmDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmDriver.resx">
+      <DependentUpon>FrmDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmItemGover.ar.resx">
+      <DependentUpon>FrmItemGover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmItemGover.resx">
+      <DependentUpon>FrmItemGover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmPrescriptionAdd.resx">
+      <DependentUpon>FrmPrescriptionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.ar.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRestorePassword.ar.resx">
+      <DependentUpon>FrmRestorePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRestorePassword.en.resx">
+      <DependentUpon>FrmRestorePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRestorePassword.resx">
+      <DependentUpon>FrmRestorePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfile.ar.resx">
+      <DependentUpon>FrmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfile.en.resx">
+      <DependentUpon>FrmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfile.resx">
+      <DependentUpon>FrmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSQLHello.resx">
+      <DependentUpon>FrmSQLHello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStrat.ar.resx">
+      <DependentUpon>FrmStrat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.ar.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.en.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207111459193_newIni.resx">
+      <DependentUpon>202207111459193_newIni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207111946010_newIni2.resx">
+      <DependentUpon>202207111946010_newIni2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207112122270_newIni3.resx">
+      <DependentUpon>202207112122270_newIni3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207112148099_newIni4.resx">
+      <DependentUpon>202207112148099_newIni4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207141403526_newInit4.resx">
+      <DependentUpon>202207141403526_newInit4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207161451362_newInit5.resx">
+      <DependentUpon>202207161451362_newInit5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207161723117_newInit6.resx">
+      <DependentUpon>202207161723117_newInit6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207162230397_newInit7.resx">
+      <DependentUpon>202207162230397_newInit7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207181418285_newinit8.resx">
+      <DependentUpon>202207181418285_newinit8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207181852019_newinit9.resx">
+      <DependentUpon>202207181852019_newinit9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208051833361_new5_8.resx">
+      <DependentUpon>202208051833361_new5_8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208051935209_new5_8_1.resx">
+      <DependentUpon>202208051935209_new5_8_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208091157312_new8_9.resx">
+      <DependentUpon>202208091157312_new8_9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208091203256_new8_9_1.resx">
+      <DependentUpon>202208091203256_new8_9_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208091239263_new8_9_2.resx">
+      <DependentUpon>202208091239263_new8_9_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208091316106_new8_9_3.resx">
+      <DependentUpon>202208091316106_new8_9_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208091430266_new8_9_4.resx">
+      <DependentUpon>202208091430266_new8_9_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208091536575_new8_9_5.resx">
+      <DependentUpon>202208091536575_new8_9_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208111338447_newAll.resx">
+      <DependentUpon>202208111338447_newAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208161618319_new9.resx">
+      <DependentUpon>202208161618319_new9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208171436415_new10.resx">
+      <DependentUpon>202208171436415_new10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210230849065_editcomm.resx">
+      <DependentUpon>202210230849065_editcomm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210242010245_editcomm2.resx">
+      <DependentUpon>202210242010245_editcomm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210242241106_editcomm3.resx">
+      <DependentUpon>202210242241106_editcomm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210311525029_AddTasleemStatueToGroup.resx">
+      <DependentUpon>202210311525029_AddTasleemStatueToGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305122108227_newDriver.resx">
+      <DependentUpon>202305122108227_newDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305131717074_newCarType.resx">
+      <DependentUpon>202305131717074_newCarType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305141739345_newCarType2.resx">
+      <DependentUpon>202305141739345_newCarType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305141745303_newCarType3.resx">
+      <DependentUpon>202305141745303_newCarType3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305152102115_newdb.resx">
+      <DependentUpon>202305152102115_newdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305160325438_newdb3.resx">
+      <DependentUpon>202305160325438_newdb3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305211752519_newExmon.resx">
+      <DependentUpon>202305211752519_newExmon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305221315447_newex2.resx">
+      <DependentUpon>202305221315447_newex2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305221559523_newex3.resx">
+      <DependentUpon>202305221559523_newex3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305221630184_newex4.resx">
+      <DependentUpon>202305221630184_newex4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305230603173_new5.resx">
+      <DependentUpon>202305230603173_new5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305230605477_new51.resx">
+      <DependentUpon>202305230605477_new51.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305230623407_new52.resx">
+      <DependentUpon>202305230623407_new52.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305231728056_new6.resx">
+      <DependentUpon>202305231728056_new6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305251925492_new7.resx">
+      <DependentUpon>202305251925492_new7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305261934014_new91.resx">
+      <DependentUpon>202305261934014_new91.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305262227158_new101.resx">
+      <DependentUpon>202305262227158_new101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306111226213_editPassport.resx">
+      <DependentUpon>202306111226213_editPassport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RPT\AccountDebitReports.resx">
+      <DependentUpon>AccountDebitReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\AccountMovmentVendorsReports.resx">
+      <DependentUpon>AccountMovmentVendorsReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\AccountMovmentSenderReports.resx">
+      <DependentUpon>AccountMovmentSenderReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FrmDesign.resx">
+      <DependentUpon>FrmDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptCustomersExport.resx">
+      <DependentUpon>RptCustomersExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptExCompanyAccounts.resx">
+      <DependentUpon>RptExCompanyAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptWasl.ar.resx">
+      <DependentUpon>RptWasl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptWasl.resx">
+      <DependentUpon>RptWasl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptTicket.ar.resx">
+      <DependentUpon>RptTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptTicket.resx">
+      <DependentUpon>RptTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptPassport.ar.resx">
+      <DependentUpon>RptPassport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptPassport.resx">
+      <DependentUpon>RptPassport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptVisa.ar.resx">
+      <DependentUpon>RptVisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptVisa.resx">
+      <DependentUpon>RptVisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptOrders.resx">
+      <DependentUpon>RptOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\AccountExpensesReports.resx">
+      <DependentUpon>AccountExpensesReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\AccountSummaryReports.resx">
+      <DependentUpon>AccountSummaryReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\AccountsDataReports.resx">
+      <DependentUpon>AccountsDataReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\BillsAnalysisProfit.resx">
+      <DependentUpon>BillsAnalysisProfit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\BillsAnalysisTable.resx">
+      <DependentUpon>BillsAnalysisTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\BillsAnalysis.resx">
+      <DependentUpon>BillsAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\BillsItemsReports.resx">
+      <DependentUpon>BillsItemsReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\ItemsExpReports.resx">
+      <DependentUpon>ItemsExpReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\ItemsStockReports.resx">
+      <DependentUpon>ItemsStockReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\ProfitsReports.resx">
+      <DependentUpon>ProfitsReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptEndDayAll.ar.resx">
+      <DependentUpon>RptEndDayAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptEndDayAll.resx">
+      <DependentUpon>RptEndDayAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptEndDayN.ar.resx">
+      <DependentUpon>RptEndDayN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptEndDayN.resx">
+      <DependentUpon>RptEndDayN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptEndDayUserPos.ar.resx">
+      <DependentUpon>RptEndDayUserPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptEndDayUserPos.resx">
+      <DependentUpon>RptEndDayUserPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptPrescripUsageLabel50X25.resx">
+      <DependentUpon>RptPrescripUsageLabel50X25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptDiscountNote.ar.resx">
+      <DependentUpon>RptDiscountNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptDiscountNote.resx">
+      <DependentUpon>RptDiscountNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\BillsReports.resx">
+      <DependentUpon>BillsReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FormBarcodRpt.resx">
+      <DependentUpon>FormBarcodRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\AccountMovmentReports.resx">
+      <DependentUpon>AccountMovmentReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\ItemsMovmentsReports.resx">
+      <DependentUpon>ItemsMovmentsReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptBarcode.resx">
+      <DependentUpon>RptBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptVoucher.ar.resx">
+      <DependentUpon>RptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptVoucher.resx">
+      <DependentUpon>RptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmAccountTransactions.ar.resx">
+      <DependentUpon>FrmAccountTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmAccountTransactions.resx">
+      <DependentUpon>FrmAccountTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmVouchersList.resx">
+      <DependentUpon>FrmVouchersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmCustomersList.resx">
+      <DependentUpon>FrmCustomersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptCashAccountsName.resx">
+      <DependentUpon>RptCashAccountsName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\FrmRollsNames.resx">
+      <DependentUpon>FrmRollsNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmCustomerAcc.resx">
+      <DependentUpon>FrmCustomerAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acc\FrmCashAccounts.resx">
+      <DependentUpon>FrmCashAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForm\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSQLConn.resx">
+      <DependentUpon>FrmSQLConn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStrat.resx">
+      <DependentUpon>FrmStrat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FrmDesignReports.resx">
+      <DependentUpon>FrmDesignReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FrmViewReports.resx">
+      <DependentUpon>FrmViewReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptBarcode50X25.resx">
+      <DependentUpon>RptBarcode50X25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptForm.resx">
+      <DependentUpon>RptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptSaleInvoice.ar.resx">
+      <DependentUpon>RptSaleInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RptSaleInvoice.resx">
+      <DependentUpon>RptSaleInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmSearchNames.ar.resx">
+      <DependentUpon>FrmSearchNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\FrmSearchNames.resx">
+      <DependentUpon>FrmSearchNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\fff.resx">
+      <DependentUpon>fff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\FrmUserAuthorityGroups.ar.resx">
+      <DependentUpon>FrmUserAuthorityGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\FrmUserAuthorityGroups.en.resx">
+      <DependentUpon>FrmUserAuthorityGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\FrmUserAuthorityGroups.resx">
+      <DependentUpon>FrmUserAuthorityGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\FrmUserSetting.ar.resx">
+      <DependentUpon>FrmUserSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\FrmUserSetting.en.resx">
+      <DependentUpon>FrmUserSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\FrmUserSetting.resx">
+      <DependentUpon>FrmUserSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScree1.ar.resx">
+      <DependentUpon>SplashScree1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScree1.en.resx">
+      <DependentUpon>SplashScree1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScree1.resx">
+      <DependentUpon>SplashScree1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\CarWasherSystem.Models.BillsProfitTaxDTO.datasource" />
+    <None Include="Properties\DataSources\CarWasherSystem.Models.WashingCounter.datasource" />
+    <None Include="Properties\DataSources\EXMON.Models.ItemCompanyTorism.datasource" />
+    <None Include="Properties\DataSources\EXMON.Models.ItemDistrict.datasource" />
+    <None Include="Properties\DataSources\EXMON.Models.ItemDriver.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.AirLine.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.CompanyTorism.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.Customer1.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.CustomerDto.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.Destination.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.District.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.Driver.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.ExCompany.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.ExCompanyDTO.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.Order.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.OrderDto.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.OrderSub.datasource" />
+    <None Include="Properties\DataSources\ExmonSystem.Models.Subscriber.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CarWasher.ico" />
+    <Content Include="CARWASHLOGO.ico" />
+    <Content Include="logom5azn.ico" />
+    <None Include="Resources\itemIcon.png" />
+    <None Include="Resources\imageannotation.svg" />
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ru\DevExpress.Charts.Designer.v20.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="tr\Microsoft.Build.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hans\Microsoft.Build.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hant\Microsoft.Build.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Acc\temp\" />
+  </ItemGroup>
+  <ItemGroup Condition="$(VisualStudioVersion) == '16.0'">
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTesting, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' == ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Reactor_Enabled="0" Reactor_Commands="" Reactor_Project="D:\Projects\GigaPOS\NewGigapos\GIGAPOS\secur\NewGigaPos.nrproj" Reactor_Configuration="ALL" Reactor_Output="&lt;AssemblyLocation&gt;\&lt;AssemblyFileName&gt;" Reactor_Deploy="0" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
