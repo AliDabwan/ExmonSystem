@@ -32,7 +32,7 @@ namespace ExmonSystem.Acc
         async Task  GetLoadFields()
         {
             
-          
+            
             var xx = await accControl.GetAllExCompaniesForList();
             //listGovers.Add(new ItemGover() { Id = 0, Name = "الكل" });
 
