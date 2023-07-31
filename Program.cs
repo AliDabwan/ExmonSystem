@@ -21,9 +21,9 @@ namespace ExmonSystem
         /// </summary>
         /// 
         public static string ResturantItemNote { get; set; }
-        public static string ParcelBaracod { get; set; } = "";
+        public static string ParcelBaracod { get; set; } = " ";
 
-        public static int appNewVersionNo { get; set; } = 2005;
+        public static int appNewVersionNo { get; set; } = 2006;
 
 
         public static bool DoSavePosNewTouch { get; set; }
