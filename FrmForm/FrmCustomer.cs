@@ -220,7 +220,7 @@ namespace ExmonSystem.Acc
                         obj.LastUpdateDate = DateTime.Now;
                         obj.LastUpdateUserId = Program.userId;
                         db.Entry<Customer>(obj).State = EntityState.Modified;
-
+                          
                     }
                     var rslt=await  db.SaveChangesAsync();
                     //helper.ShowMessage(this, "", "تم الحفظ بنجاح " + "\n" + "Saved  Done ");
